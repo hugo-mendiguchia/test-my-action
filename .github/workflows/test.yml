@@ -1,0 +1,14 @@
+name: Mi Primera GitHub Action
+on: [push]
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/Test-Hugo-first-steps@v1
+        # uses: hugo-mendiguchia/Test-Hugo-first-steps@v1
+
+      - name: Imprimir un mensaje
+        run: echo "La fecha fue ${{ steps.hello-output.time }}"
